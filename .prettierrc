@@ -12,6 +12,6 @@
   "trailingComma": "all",
   "jsxBracketSameLine": true,
   "jsxSingleQuote": false,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": false
 }
 

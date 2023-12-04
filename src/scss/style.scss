@@ -1,16 +1,50 @@
-/* Import lib styles  */
-// @import '../../node_modules/swiper/swiper.scss';
-// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
-// @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
-// @import '../../node_modules/swiper/modules/pagination/pagination.scss';
-// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
-// @import '../../node_modules/nouislider/dist/nouislider.min';
-// @import '../../node_modules/aos/src/sass/aos.scss';
-// @import '../../node_modules/choices.js/src/styles/choices.scss';
-// "./lib/tips";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../node_modules/swiper/modules/pagination/pagination.scss";
+@import "../../node_modules/swiper/modules/effect-fade/effect-fade.scss";
+
+@import "mixins";
+@import "fonts";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply text-base font-grotesque font-normal text-primary bg-white leading-normal;
+  }
+}
 
+@layer components {
+  .primary-gradient {
+    @apply absolute bottom-0 left-0 w-full z-10;
+    background: linear-gradient(180deg, rgba(25, 65, 123, 0) 10%, #19417b 85%, #19417b 100%);
+  }
+}
+
+
+// sliders
+.video-slider-pagination {
+  .swiper-pagination-bullet {
+    @apply w-[14px] h-[14px] bg-white transition-colors duration-300;
+  }
+}
+
+
+// header
+#burger-inner {
+  &.active-burger {
+    @apply [&>*:nth-child(-n+3)]:translate-x-10;
+  }
+}
+#burger-cross {
+  &.active-burger {
+    @apply w-12 translate-x-0  [&>*:nth-child(1)]:rotate-45 [&>*:nth-child(2)]:-rotate-45;
+  }
+}
+#header-nav {
+  &.active-menu {
+    @apply -translate-y-0;
+  }
+}

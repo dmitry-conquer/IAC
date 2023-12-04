@@ -1,18 +1,95 @@
 <!DOCTYPE html>
 <html lang="uk">
-  @@include('components/head.html', { 'title': 'Головна' })
+  @@include('components/head.html', { 'title': 'Home Page' })
   <body>
     <div class="wrapper">
       @@include('components/header.html', { })
       <main>
-        <section class=""></section>
+        <!-- hero section (videos slider) -->
+        <section id="main-hero-section" class="w-full h-screen relative">
+          <div class="primary-gradient h-[90%]"></div>
+          <div class="absolute left-1/2 top-1/2 z-20 w-full max-w-[47rem] -translate-x-1/2 -translate-y-1/2">
+            <h1 class="text-5xl/none sm:text-6xl  lg:text-7xl/[1.06] uppercase text-white font-light text-center tracking-[0.1rem] sm:tracking-[3.2px] mb-[1.31rem]">
+              Complete Lease ManagementR
+            </h1>
+            <div data-da="#main-hero-section,767.98,1" class="video-slider-pagination flex justify-center max-md:absolute max-md:!bottom-20 z-[999]"></div>
+          </div>
+          <div class="video-slider overflow-hidden w-full h-full">
+            <div class="video-slider-wrap flex w-full h-full">
+              <div class="video-slider-slide shrink-0">
+                <img
+                  src="https://images.pexels.com/photos/674783/pexels-photo-674783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="slider_1"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="video-slider-slide shrink-0">
+                <img
+                  src="https://images.pexels.com/photos/175656/pexels-photo-175656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="slider_2"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div class="video-slider-slide shrink-0">
+                <img
+                  src="https://images.pexels.com/photos/3768652/pexels-photo-3768652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="slider_3"
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Us -->
+        <section class="py-11 xl:pt-[4.63rem] pb-[6.63rem] relative bg-light">
+          <div class="absolute top-0 left-0 w-full h-8 bg-light rounded-t-[2rem] -translate-y-full z-30"></div>
+          <div class="container">
+            <div class="flex flex-col xl:flex-row mb-[3.75rem]">
+              <h2 class="text-md/normal font-bold uppercase mr-auto xl:pt-5 mb-6 xl:mb-0">About Us</h2>
+              <div class="max-w-full lg:max-w-[50rem] xl:mr-[11.44rem]">
+                <h3 class="text-4xl/[1.37] mb-6">
+                  International Airfinance Corporation, IAFC, is one of the leading and fastest growing aircraft leasing
+                  companies in the Middle East.
+                </h3>
+                <div class="grid grid-cols-2 gap-10 mb-6">
+                  <p class="leading-normal">
+                    Our expertise in global markets, coupled with robust relationships with manufacturers and leading
+                    global financial institutions, empowers us to deliver best-in-class aircraft leasing and financing
+                    services.
+                  </p>
+                  <p class="leading-normal">
+                    An innovative aircraft lessor of scale, with a quality portfolio and global reach, IAFC's mission is
+                    to create value for its clients and stakeholders.
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="hover:bg-primary hover:text-white transition-colors rounded-[2.5rem] border border-primary font-bold leading-normal block py-[0.88rem] px-5 w-full max-w-[15rem] text-center"
+                  >Read more</a
+                >
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:rid-cols-2 xl:grid-cols-4 gap-5">
+              <div class="p-10 pb-9 bg-primary-light flex flex-col justify-center rounded-[1.25rem]">
+                <span class="text-6xl/[1.15] font-medium">10 <span class="text-4xl">years</span></span>
+                <span class="leading-[1.12] opacity-70">of success</span>
+              </div>
+              <div class="p-10 pb-9 bg-primary-light flex flex-col justify-center rounded-[1.25rem]">
+                <span class="text-6xl/[1.15] font-medium">55</span>
+                <span class="leading-[1.12] opacity-70">aircraft leased and managed</span>
+              </div>
+              <div class="p-10 pb-9 bg-primary-light flex flex-col justify-center rounded-[1.25rem]">
+                <span class="text-6xl/[1.15] font-medium">$4.2 bln</span>
+                <span class="leading-[1.12] opacity-70">funds deployed</span>
+              </div>
+              <div class="p-10 pb-9 bg-primary-light flex flex-col justify-center rounded-[1.25rem]">
+                <span class="text-6xl/[1.15] font-medium">$330m</span>
+                <span class="leading-[1.12] opacity-70">per year of managed lease revenues</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      @@include('components/footer.html', { }) 
-      @@include('components/modal.html', { })
+      @@include('components/footer.html', { })
     </div>
-    <script
-      type="module"
-      crossorigin
-      src="./js/app.min.js"></script>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
   </body>
 </html>

@@ -1,62 +1,41 @@
-import Swiper, { Navigation, Pagination, Autoplay, Parallax, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
 
-// Slider init function
-export function initSliders() {
-   //  Sliders list
-   if (document.querySelector('.slider')) {
-      let defaultSlider;
-      defaultSlider = new Swiper('.slider', {
-         // Сonnect modules (P.S dont forget !import)
-         modules: [Navigation, Pagination, Autoplay, Parallax],
+if (document.querySelector(".video-slider")) {
+  new Swiper(".video-slider", {
+    modules: [Pagination, Autoplay, EffectFade],
+    wrapperClass: "video-slider-wrap",
+    slideClass: "video-slider-slide",
+    slidesPerView: 1,
+    speed: 1200,
+    loop: true,
 
-         // Custom classes
-         wrapperClass: 'slider__wrapper',
-         slideClass: 'slider__slide',
+    effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
 
-         // Common settings
-         slidesPerView: 1,
-         spaceBetween: 30,
-         speed: 800,
-         observer: true,
-         observeParents: true,
-         loop: true,
-         loopedSlides: 2,
-         // centeredSlides: true,
-         // parallax: true,
-         // watchOverflow: false,
-         //autoHeight: true,
-         // watchSlidesProgress: true,
+    // Pagination
+    pagination: {
+       el: '.video-slider-pagination',
+       clickable: true,
+    },
 
-         // Effects
-         //effect: 'fade',
-         //autoplay: {
-         //  delay: 1000,
-         //  disableOnInteraction: false,
-         //  pauseOnMouseEnter: true,
-         //},
+    // Scrollbar
+    // //scrollbar: {
+    // //  el: '.swiper-scrollbar',
+    // //  draggable: true,
+    // //},
 
-         // Pagination
-         // pagination: {
-         //    el: '.slider-default__pagination',
-         //    clickable: true,
-         // },
+    // Navigation
+    // navigation: {
+    //    prevEl: '.slider-default__button_prev',
+    //    nextEl: '.slider-default__button_next',
+    // },
 
-         // Scrollbar
-         // //scrollbar: {
-         // //  el: '.swiper-scrollbar',
-         // //  draggable: true,
-         // //},
-
-         // Navigation
-         // navigation: {
-         //    prevEl: '.slider-default__button_prev',
-         //    nextEl: '.slider-default__button_next',
-         // },
-
-
-
-         // Breakpoints
-         /*
+    // Breakpoints
+    /*
          breakpoints: {
             320: {
                slidesPerView: 1,
@@ -76,50 +55,5 @@ export function initSliders() {
             },
          },
          */
-
-
-         // Events
-            /*
-         on: {
-            // - - - - - - - [custom fraction] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            init: function (swiper) {
-              const allSliders = document.querySelector('.slider__all');
-              allSliders.innerHTML = swiper.slides.length;
-              console.log(allSliders.innerHTML);
-            },
-            slideChange: function (swiper) {
-              const currentSlide = document.querySelector('.slider__current');
-              currentSlide.innerHTML = swiper.realIndex + 1;
-              console.log(currentSlide.innerHTML);
-            },
-
-
-            // - - - - - - - [tabs] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            init: function(swiper) {
-               const captions = document.querySelectorAll('.captions-courses__item');
-               captions.forEach((item, index) => {
-                  item.addEventListener('click', function(e) {
-                     swiper.slideTo(index, 800)
-                  });
-               })
-            },
-            slideChange: function(swiper) {
-               const captions = document.querySelectorAll('.captions-courses__item');
-               captions.forEach((item) => {
-                  item.classList.remove('_active');
-               })
-               captions[swiper.realIndex].classList.add('_active');
-            },
-         },
-            */
-      });
-
-      // stop slider on mouseenter
-      // defaultSlider.el.addEventListener('mouseenter', () => {
-      //    defaultSlider.autoplay.stop();
-      // });
-      // defaultSlider.el.addEventListener('mouseleave', () => {
-      //    defaultSlider.autoplay.start();
-      // });
-   }
+  });
 }

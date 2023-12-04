@@ -1,0 +1,39 @@
+<header class="absolute bg-light md:bg-transparent left-0 top-0 w-full z-[9999]">
+  <div class="container flex justify-between w-full sm:gap-16 items-center xl:items-start py-[0.6rem] md:py-[2.625rem]">
+    <button id="burger-button" class="group relative z-[999] block lg:hidden">
+      <div class="relative flex h-[50px] w-[40px] transform items-center justify-center overflow-hidden">
+        <div
+          id="burger-inner"
+          class="flex h-[20px] w-[25px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
+          <div class="h-[2px] w-5 origin-left self-end transform rounded-2xl bg-[#1C75BC] md:bg-light transition-all duration-300"></div>
+          <div class="h-[2px] w-7 transform rounded-2xl bg-[#1C75BC] md:bg-light transition-all delay-75 duration-300"></div>
+          <div
+            class="h-[2px] w-5 self-end origin-left transform rounded-2xl bg-[#1C75BC] md:bg-light transition-all delay-150 duration-300"></div>
+          <div
+            id="burger-cross"
+            class="absolute top-2.5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500">
+            <div
+              class="absolute h-[2px] w-7 rotate-0 transform rounded-2xl bg-white transition-all delay-300 duration-500"></div>
+            <div
+              class="absolute h-[2px] w-7 -rotate-0 transform rounded-2xl bg-white transition-all delay-300 duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </button>
+    <a href="/" class="max-sm:w-full max-sm:flex max-sm:justify-center max-sm:-ml-[25px]">
+      <picture>
+         <source srcset="./img/main-logo-mob.svg" media="(max-width: 768px)" />
+         <img src="./img/main-logo.svg" alt="main-logo" class="w-[9.375rem] sm:w-[11rem] md:w-[14rem] xl:w-[17.25rem]"/>
+      </picture>
+    </a>
+    <nav id="header-nav" class="max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full ml-auto max-lg:h-screen max-lg:bg-primary max-lg:-translate-y-full will-change-transform max-lg:transition-transform max-lg:duration-700">
+      <ul class="flex gap-8 w-full h-full flex-col lg:flex-row max-lg:justify-center items-center">
+        <li><a href="#" class="uppercase text-white font-medium leading-normal text-2xl lg:text-base hover:underline">About Us</a></li>
+        <li><a href="#" class="uppercase text-white font-medium leading-normal text-2xl lg:text-base hover:underline">Services</a></li>
+        <li><a href="#" class="uppercase text-white font-medium leading-normal text-2xl lg:text-base hover:underline">Media Center</a></li>
+        <li><a href="#" class="uppercase text-white font-medium leading-normal text-2xl lg:text-base hover:underline">Careers</a></li>
+        <li><a href="#" class="uppercase text-white font-medium leading-normal text-2xl lg:text-base hover:underline">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
