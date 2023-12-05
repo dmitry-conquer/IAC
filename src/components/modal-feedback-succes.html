@@ -1,0 +1,27 @@
+<div
+  class="modal fixed inset-0 z-50 opacity-0 invisible transition-all duration-300 h-full w-full bg-black/50 px-4"
+  id="modal-feedback-success"
+  aria-hidden="true"
+  data-micromodal-close>
+  <div class="grid h-full w-full place-items-center">
+    <div class="relative w-80 rounded-[2rem] overflow-hidden flex flex-col items-center bg-white p-5" role="dialog" aria-modal="true">
+      <div class="bg-primary-light w-full h-[10.5rem] rounded-[1rem] grid place-content-center mb-[1.87rem]">
+        <img src="./img/plane-feedback.svg" alt="plane-feedback" class="w-[5.6rem] h-[5.6rem]" />
+      </div>
+      <div class="flex w-full flex-col items-center gap-[0.4rem] relative mb-[2.75rem]">
+        <p class="text-4xl/[1.37] text-center relative bg-white z-30 px-4">Thank you</p>
+        <span class="w-full h-[1px] bg-primary absolute z-10 left-0 top-[20px]"></span>
+        <p class="text-center">
+          Your message <br />
+          was successfully sent
+        </p>
+      </div>
+      <button
+        class="sm:col-span-2 max-sm:mt-[0.6rem] transition-colors rounded-[2.5rem] border hover:bg-primary hover:text-white uppercase border-primary bg-white font-bold leading-normal block py-[0.88rem] px-5 w-full text-center"
+        data-micromodal-close
+        type="button">
+        close
+      </button>
+    </div>
+  </div>
+</div>

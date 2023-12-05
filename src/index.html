@@ -2,7 +2,7 @@
 <html lang="uk">
   @@include('components/head.html', { 'title': 'Home Page' })
   <body>
-    <div class="wrapper">
+    <div class="overflow-hidden relative">
       @@include('components/header.html', { })
       <main>
         <!-- hero section (videos slider) -->
@@ -43,8 +43,8 @@
           <div class="absolute top-0 left-0 w-full h-8 bg-light rounded-t-[2rem] -translate-y-[calc(100%-1px)] z-30"></div>
           <div class="container mb-[3.75rem] md:mb-[6.75rem]">
             <div class="flex flex-col xl:flex-row mb-[3.44rem] sm:mb-[3.75rem]">
-              <h2 class="text-md/normal font-bold uppercase mr-auto xl:pt-5 mb-6 xl:mb-0">About Us</h2>
-              <div class="max-w-full lg:max-w-[50rem] xl:mr-[11.44rem]">
+              <h2 class="text-md/normal font-bold uppercase xl:mr-[15.38rem] xl:pt-5 mb-6 xl:mb-0">About Us</h2>
+              <div class="max-w-full lg:max-w-[50rem] xl:mr-auto">
                 <h3 class="text-4xl/[1.37] mb-6">
                   International Airfinance Corporation, IAFC, is one of the leading and fastest growing aircraft leasing companies in the Middle East.
                 </h3>
@@ -121,8 +121,8 @@
           <div class="absolute top-0 left-0 w-full h-8 bg-primary rounded-t-[2rem] -translate-y-[calc(100%-1px)] z-30"></div>
           <div>
             <div class="container flex flex-col xl:flex-row mb-[3.44rem] sm:mb-[5.25rem]">
-              <h2 class="text-md/normal font-bold uppercase mr-auto xl:pt-5 mb-6 xl:mb-0 text-white">Our achievements</h2>
-              <div class="max-w-full lg:max-w-[45rem] xl:mr-[11.44rem]">
+              <h2 class="text-md/normal font-bold uppercase xl:mr-[9.56rem] xl:pt-5 mb-6 xl:mb-0 text-white">Our achievements</h2>
+              <div class="max-w-full lg:max-w-[45rem] xl:mr-auto">
                 <h3 class="text-4xl/[1.37] mb-6 text-white">Recent Awards</h3>
                 <p class="leading-normal text-white">
                   Our expertise in global markets, coupled with robust relationships with manufacturers and leading global financial institutions, empowers us to deliver
@@ -176,7 +176,7 @@
           <div class="container">
             <!-- header -->
             <div class="flex flex-col xl:flex-row sm:mb-[3.75rem]">
-              <h2 class="text-md/normal font-bold uppercase xl:pt-5 mb-6 xl:mb-0 mr-[17rem]">News</h2>
+              <h2 class="text-md/normal font-bold uppercase xl:pt-5 mb-6 xl:mb-0 xl:mr-[17rem]">News</h2>
               <div class="">
                 <h3 class="text-4xl/[1.37] sm:mb-6">Recent news and corporate releases</h3>
               </div>
@@ -252,48 +252,56 @@
           <div class="absolute bottom-0 left-0 w-full h-8 bg-primary rounded-b-[2rem] translate-y-[calc(100%-1px)] z-30"></div>
           <div class="container">
             <div class="flex flex-col xl:flex-row">
-              <h2 class="text-md/normal font-bold uppercase mr-[13.75rem] mb-6 xl:mb-0 text-white">Contact Us</h2>
+              <h2 class="text-md/normal font-bold uppercase xl:mr-[13.75rem] mb-6 xl:mb-0 text-white">Contact Us</h2>
               <div class="max-w-full lg:max-w-[37.5rem]">
                 <h3 class="text-4xl/[1.37] mb-6 text-white">Didn’t find what you’re looking for? Contact Us!</h3>
                 <p class="text-white mb-6">
                   Should you wish to contact IAFC or would like to request further information related to the Services or any other general information, please contact us via
                   email.
                 </p>
-                <form action="#">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-                    <input
-                      type="text"
-                      placeholder="Full name"
-                      class="py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      class="py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
-                    <input
-                      type="tel"
-                      placeholder="Phone number"
-                      class="py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      class="py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
-                    <textarea
-                      placeholder="Message"
-                      class="resize-none sm:col-span-2 py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white h-[7.5rem]"></textarea>
-                    <button
-                      type="submit"
-                      class="sm:col-span-2 max-sm:mt-[0.6rem] transition-colors rounded-[2.5rem] border hover:bg-white/80 uppercase border-primary bg-white font-bold leading-normal block py-[0.88rem] px-5 w-full text-center">
-                      Get in touch
-                    </button>
-                  </div>
-                </form>
+                <div id="feedback-form-wrap">
+                  <form action="#">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
+                      <input
+                        type="text"
+                        placeholder="Full name"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="tel"
+                        placeholder="Phone number"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="text"
+                        placeholder="Subject"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <textarea
+                        placeholder="Message"
+                        class="resize-none sm:col-span-2 form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white h-[7.5rem]"></textarea>
+                      <button
+                        type="submit"
+                        class="sm:col-span-2 max-sm:mt-[0.6rem] transition-colors rounded-[2.5rem] border hover:bg-white/80 uppercase border-primary bg-white font-bold leading-normal block py-[0.88rem] px-5 w-full text-center">
+                        Get in touch
+                      </button>
+                    </div>
+                  </form>
+                  <p id="form-error-message" class="hidden text-[#F00] leading-snug mt-[1.81rem] text-center">
+                    Email failed to send. <br />
+                    Check the fields and try again
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
       @@include('components/footer.html', { })
+      @@include('components/modal-feedback-succes.html', { })
     </div>
-    <script type="module" crossorigin src="./js/app.min.js"></script>
+    <!-- <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> -->
+    <script type="module" src="./js/app.min.js"></script>
   </body>
 </html>

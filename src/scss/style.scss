@@ -46,3 +46,17 @@
     @apply -translate-y-0;
   }
 }
+
+// form
+#feedback-form-wrap {
+  .field-error {
+    @apply border-[#F00] text-[#F00] placeholder:text-[#F00];
+  }
+}
+
+//modals
+.modal {
+  &.is-open {
+    @apply visible opacity-100;
+  }
+}
