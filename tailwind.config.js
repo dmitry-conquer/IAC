@@ -30,7 +30,8 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: "#19417B",
-          "light": "#EDEFF4"
+          "light": "#EDEFF4",
+          "dark": "#0C1A3B"
         },
         light: {
           DEFAULT: "#F5F5F5"
@@ -42,7 +43,7 @@ module.exports = {
     },
   },
   future: {
-    hoverOnlyWhenSupported: true,
+    // hoverOnlyWhenSupported: true,
   },
   // plugins: [require("@tailwindcss/typography")],
 };

@@ -12,25 +12,23 @@
 
 @layer base {
   body {
-    @apply text-base font-grotesque font-normal text-primary bg-white leading-normal;
+    @apply text-base font-grotesque font-normal text-primary bg-light leading-normal;
   }
 }
 
 @layer components {
   .primary-gradient {
     @apply absolute bottom-0 left-0 w-full z-10;
-    background: linear-gradient(180deg, rgba(25, 65, 123, 0) 10%, #19417b 85%, #19417b 100%);
+    background: linear-gradient(180deg, rgba(25, 65, 123, 0) 1%, #19417b 85%, #19417b 100%);
   }
 }
 
-
 // sliders
-.video-slider-pagination {
+.pagination {
   .swiper-pagination-bullet {
     @apply w-[14px] h-[14px] bg-white transition-colors duration-300;
   }
 }
-
 
 // header
 #burger-inner {
