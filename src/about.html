@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'About Us' })
+  <body>
+    <div class="overflow-hidden relative">
+      @@include('components/header-color.html', { })
+      <main>
+        <section class="bg-light pt-[6.2rem] md:pt-[10rem] lg:pt-[12rem] 2xl:pt-[15rem]">
+          <div class="container mb-[1.19rem] xl:-mb-20">
+            <h1 class="text-6xl/[1.1] md:text-[70px]/tight mb-[1.37rem] xl:mb-0 lg:text-8xl/[1.27]">
+              Leading global aircraft <br />
+              <span class="max-xl:hidden invisible pr-[21rem]"></span> leasing company
+            </h1>
+            <p class="max-w-full md:max-w-[25rem] xl:max-w-[17.6rem] xl:-translate-y-28">
+              IAFC stands as a premier global aircraft leasing company, catering to a client base comprising major international airlines and institutional investors
+            </p>
+          </div>
+          <div class="h-[16.5rem] sm:h-full w-full">
+            <img src="./img/about-page/image_1.webp" alt="image_1" class="w-full h-full object-cover rounded-t-[2rem]" />
+          </div>
+        </section>
+
+        <section class="pt-5 sm:pt-11 xl:pt-[4.63rem] md:pb-[5.25rem] relative bg-primary">
+          <div class="absolute top-0 left-0 w-full h-8 bg-primary rounded-t-[2rem] -translate-y-[calc(100%-1px)] z-30"></div>
+          <div class="absolute bottom-0 left-0 w-full h-8 bg-primary rounded-b-[2rem] translate-y-[calc(100%-1px)] z-30"></div>
+          <div class="container">
+            <div class="flex flex-col xl:flex-row mb-[2.69rem] sm:mb-20 md:mb-24 2xl:mb-[8.25rem]">
+              <h2 class="text-md/normal font-bold uppercase xl:mr-[15.38rem] xl:pt-5 mb-6 xl:mb-0 text-white">About Us</h2>
+              <div class="max-w-full lg:max-w-[50rem] xl:mr-auto">
+                <h3 class="text-4xl/[1.37] mb-[1.56rem] sm:mb-9 md:mb-[4.25rem] text-white">
+                  IAFC has been at the forefront of introducing groundbreaking Islamic financing solutions to the aviation industry. By strategically positioning itself, the
+                  company offers distinctive products and services in the Middle East, and Africa
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-[1.56rem] sm:gap-10">
+                  <p class="text-white">
+                    The leadership of IAFC comprises a seasoned team with a demonstrated track record in every facet of aircraft leasing, finance, and management. This encompasses
+                    innovative lease structures, aircraft acquisition and maintenance, fleet planning, and restructuring.
+                  </p>
+                  <p class="text-white">
+                    IAFC's strategic focus centers on acquiring new aircraft that rank among the most sought-after globally. As an innovative and sizable aircraft lessor boasting a
+                    high-quality portfolio and global reach, IAFC is dedicated to creating value for both clients and shareholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="xl:ml-[21rem] flex sm:flex-row flex-col items-start gap-5">
+              <div class="grow"><img src="./img/about-page/image_2.webp" alt="image_2" class="w-full h-full object-cover rounded-[2rem]" /></div>
+              <div class="max-w-[22rem] w-full sm:w-[19.6rem] "><img src="./img/about-page/image_3.webp" alt="image_3" class="w-full h-full object-cover rounded-[2rem]" /></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <!-- <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> -->
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>
