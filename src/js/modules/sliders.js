@@ -18,14 +18,11 @@ if (videoSlider) {
     },
     pagination: {
       el: ".video-slider-pagination",
-      clickable: false,
+      clickable: true,
     },
     on: {
       slideChange: function (swiper) {
-        swiper.slides.forEach((s, i) => {
-          let newIndex = swiper.activeIndex === 0 ? 3 : swiper.activeIndex;
-          if (i + 1 !== newIndex) s.firstElementChild.currentTime = 0;
-        });
+        swiper.slides[swiper.activeIndex].firstElementChild.currentTime = 0;
       },
     },
   });
