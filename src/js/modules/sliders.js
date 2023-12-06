@@ -9,17 +9,24 @@ if (videoSlider) {
     wrapperClass: "video-slider-wrap",
     slideClass: "video-slider-slide",
     slidesPerView: 1,
-    speed: 1200,
-    loop: true,
+    speed: 900,
     effect: "fade",
     autoplay: {
-      delay,
+      delay: 13000,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
     pagination: {
       el: ".video-slider-pagination",
-      clickable: true,
+      clickable: false,
+    },
+    on: {
+      slideChange: function (swiper) {
+        swiper.slides.forEach((s, i) => {
+          let newIndex = swiper.activeIndex === 0 ? 3 : swiper.activeIndex;
+          if (i + 1 !== newIndex) s.firstElementChild.currentTime = 0;
+        });
+      },
     },
   });
 }

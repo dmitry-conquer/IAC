@@ -21,6 +21,10 @@
     @apply absolute bottom-0 left-0 w-full z-10;
     background: linear-gradient(180deg, rgba(25, 65, 123, 0) 1%, #19417b 85%, #19417b 100%);
   }
+  .primary-gradient-top {
+    @apply absolute top-0 left-0 w-full z-10 rotate-180;
+    background: linear-gradient(180deg, rgba(25, 65, 123, 0) 1%, #19407baf 85%, #19417b 100%);
+  }
 }
 
 // sliders
