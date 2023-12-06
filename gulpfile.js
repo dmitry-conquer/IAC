@@ -20,6 +20,7 @@ import { js } from './gulp/tasks/js.js';
 import { img } from './gulp/tasks/img.js';
 import { spritesGen } from './gulp/tasks/sprites-gen.js';
 import { fonts } from './gulp/tasks/fonts.js';
+import { video } from './gulp/tasks/video.js';
 // import { json } from "./gulp/tasks/json.js";
 import { zip } from './gulp/tasks/zip.js';
 import { ftp } from './gulp/tasks/ftp.js';
@@ -36,7 +37,7 @@ function watcher() {
 }
 
 // main tasks
-const mainTasks = gulp.parallel(html, style, js, img, fonts, spritesGen); // json
+const mainTasks = gulp.parallel(html, style, js, img, fonts, video, spritesGen); // json
 
 // individual tasks
 const spritesGeneration = spritesGen;

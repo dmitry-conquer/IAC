@@ -1,6 +1,9 @@
 import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
 
-if (document.querySelector(".video-slider")) {
+const videoSlider = document.querySelector(".video-slider");
+if (videoSlider) {
+  const delay = Number(videoSlider.dataset.delay);
+
   new Swiper(".video-slider", {
     modules: [Pagination, Autoplay, EffectFade],
     wrapperClass: "video-slider-wrap",
@@ -10,7 +13,7 @@ if (document.querySelector(".video-slider")) {
     loop: true,
     effect: "fade",
     autoplay: {
-      delay: 2000,
+      delay,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },

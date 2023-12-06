@@ -8,15 +8,10 @@ if (feedbackFormWrap) {
   const formField = feedbackForm.querySelectorAll(".form-field");
 
   feedbackForm.addEventListener("submit", e => {
+    e.preventDefault();
     const errors = formValidate(formField);
     if (errors > 0) {
-      e.preventDefault();
       formErrorMessage.style.display = "block";
-      if (document.getElementById("modal-feedback-success")) {
-        MicroModal.show("modal-feedback-success", {
-          disableScroll: true,
-        });
-      }
     } else {
       if (document.getElementById("modal-feedback-success")) {
         MicroModal.show("modal-feedback-success");
