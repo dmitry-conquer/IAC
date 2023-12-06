@@ -11,6 +11,8 @@ if (videoSlider) {
     slidesPerView: 1,
     speed: 900,
     effect: "fade",
+    allowTouchMove: false,
+
     autoplay: {
       delay: 13000,
       disableOnInteraction: false,
