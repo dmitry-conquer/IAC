@@ -9,6 +9,7 @@
 import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
 import "./modules/sliders.js";
 import "./modules/feedback-form.js";
+import "./modules/map.js";
 import "./modules/header.js";
 
 function app() {

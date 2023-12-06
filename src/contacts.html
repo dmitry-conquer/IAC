@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Gallery' })
+  <body>
+    <div class="overflow-hidden relative">
+      @@include('components/header-color.html', { })
+      <main>
+        <section class="bg-light pt-28 sm:pt-[10rem] md:pt-[12rem] 2xl:pt-[15rem]">
+          <div class="container mb-10 sm:mb-14">
+            <h1 class="text-6xl/[1.1] md:text-[70px]/tight lg:text-8xl/[1.27]">Contact & Location</h1>
+          </div>
+          <div id="map" data-map-center="40.780627315086576,-74.18981632834547" data-marker-icon="https://i.ibb.co/1KkMLs6/mark.png" data-map-id="a6fdb37ab2e10bf7" data-api="AIzaSyBYFU1u8u1UmlnhoZ-UlXXgGw7i9iTvAec" data-zoom="16" class="w-full h-[25rem] sm:h-[37.5rem]"></div>
+
+          <div class="bg-light relative pb-[5.75rem] sm:pb-[8.25rem] pt-2 md:pt-[4.25rem]">
+            <div class="absolute top-0 left-0 w-full h-8 bg-light rounded-t-[2rem] -translate-y-full z-30"></div>
+            <div class="container">
+              <div class="flex items-start flex-col md:flex-row gap-[1.62rem] md:gap-24 xl:gap-36">
+                <h2 class="text-md font-bold uppercase">Addresses</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1.32rem]">
+                  <div class="px-5 py-10 border-2 border-primary rounded-[1.25rem] flex flex-col">
+                    <h3 class="text-4xl leading-[1.37] mb-5 sm:mb-[3.13rem] grow">International Airfinance Corporation</h3>
+                    <p class="mb-5">
+                      Walkers Corporate Limited, <br />
+                      Cayman Corporate Centre, <br />
+                      27 Hospital Road, George Town <br />
+                      Grand Cayman KY1-9008, Cayman Islands
+                    </p>
+                    <div class="mb-[1.56rem]">
+                      <span class="font-bold">Email:</span>
+                      <a href="mailto:info@iairfinance.com" class="hover:underline mb-[1.69rem]">info@iairfinance.com</a>
+                    </div>
+                    <button data-marker="40.780627315086576,-74.18981632834547,Marker Text 1" class="flex items-center gap-[0.7rem]" type="button">
+                      <svg class="w-[19px] h-[26px] text-primary">
+                        <use href="./sprites/sprite.svg#icon-location"></use>
+                      </svg>
+                      <span class="text-lg font-medium">See on map</span>
+                    </button>
+                  </div>
+                  <div class="px-5 py-10 border-2 border-primary rounded-[1.25rem] flex flex-col">
+                    <h3 class="text-4xl leading-[1.37] mb-5 sm:mb-[3.13rem] grow">International Airfinance Corporation (DMCC Branch)</h3>
+                    <p class="mb-5">
+                      BB2, 25th floor, Mazaya Business Avenue <br />
+                      Jumeirah Lakes Towers <br />
+                      PO Box 413822, Dubai, UAE
+                    </p>
+                    <div class="mb-[1.56rem] space-y-1">
+                      <div>
+                        <span class="font-bold">Telephone:</span>
+                        <a href="tel:+97145634333" class="hover:underline mb-[1.69rem]">+971-4-563-4333</a>
+                      </div>
+                      <div>
+                        <span class="font-bold">Fax:</span>
+                        <a href="tel:+97144564895" class="hover:underline mb-[1.69rem]">+971-4-456-4895</a>
+                      </div>
+                    </div>
+                    <button data-marker="40.7838016835804,-74.17819748181971,Marker Text 2" class="flex items-center gap-[0.7rem]" type="button">
+                      <svg class="w-[19px] h-[26px] text-primary">
+                        <use href="./sprites/sprite.svg#icon-location"></use>
+                      </svg>
+                      <span class="text-lg font-medium">See on map</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- feedback -->
+        <section class="bg-primary relative pb-[4.5rem] pt-[1.12rem] py-[1.12rem] sm:py-20 md:py-[4.44rem]">
+          <div class="absolute top-0 left-0 w-full h-8 bg-primary rounded-t-[2rem] -translate-y-[calc(100%-1px)] z-30"></div>
+          <div class="absolute bottom-0 left-0 w-full h-8 bg-primary rounded-b-[2rem] translate-y-[calc(100%-1px)] z-30"></div>
+          <div class="container">
+            <div class="flex flex-col xl:flex-row">
+              <h2 class="text-md/normal font-bold uppercase xl:mr-[13.75rem] mb-6 xl:mb-0 text-white">Contact Us</h2>
+              <div class="max-w-full lg:max-w-[37.5rem]">
+                <h3 class="text-4xl/[1.37] mb-6 text-white">Didn’t find what you’re looking for? Contact Us!</h3>
+                <p class="text-white mb-6">
+                  Should you wish to contact IAFC or would like to request further information related to the Services or any other general information, please contact us via
+                  email.
+                </p>
+                <div id="feedback-form-wrap">
+                  <form action="#">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
+                      <input
+                        type="text"
+                        placeholder="Full name"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="tel"
+                        placeholder="Phone number"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <input
+                        type="text"
+                        placeholder="Subject"
+                        class="form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white" />
+                      <textarea
+                        placeholder="Message"
+                        class="resize-none sm:col-span-2 form-field py-[0.88rem] px-5 border w-full border-white/70 rounded-lg bg-transparent placeholder:text-white/70 focus:outline-none text-white h-[7.5rem]"></textarea>
+                      <button
+                        type="submit"
+                        class="sm:col-span-2 max-sm:mt-[0.6rem] transition-colors rounded-[2.5rem] border hover:bg-white/80 uppercase border-primary bg-white font-bold leading-normal block py-[0.88rem] px-5 w-full text-center">
+                        Get in touch
+                      </button>
+                    </div>
+                  </form>
+                  <p id="form-error-message" class="hidden text-[#F00] leading-snug mt-[1.81rem] text-center">
+                    Email failed to send. <br />
+                    Check the fields and try again
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>
