@@ -33,29 +33,54 @@ if (document.querySelector(".slider-awards")) {
       el: ".slider-awards-pagination",
       clickable: true,
     },
-   //  breakpoints: {
-   //    320: {
-   //      slidesPerView: 1,
-   //      spaceBetween: 0,
-   //    },
-   //    576: {
-   //      slidesPerView: 1,
-   //      spaceBetween: 0,
-   //    },
-      // 768: {
-      //   slidesPerView: 2,
-      //   spaceBetween: 20,
-      // },
-      // 992: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 20,
-      // },
-      // 1024: {
-      //   slidesPerView: 3.4,
-      // },
-      // 1280: {
-      //    slidesPerView: 4,
-      //  },
-   //  },
+  });
+}
+
+if (document.querySelector(".auto-slider")) {
+  new Swiper(".auto-slider", {
+    modules: [Pagination, Navigation],
+    wrapperClass: "auto-slider-wrapper",
+    slideClass: "auto-slider-slide",
+
+    spaceBetween: 12,
+    speed: 1000,
+    loop: true,
+    pagination: {
+      el: ".auto-slider-pagination",
+      clickable: true,
+    },
+    navigation: {
+      prevEl: ".auto-slider-prev",
+      nextEl: ".auto-slider-next",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+      },
+      576: {
+        slidesPerView: 1.7,
+      },
+      768: {
+        slidesPerView: "auto",
+      },
+      992: {
+        slidesPerView: "auto",
+      },
+    },
+
+    on: {
+      init: function (swiper) {
+        const customFraction = document.querySelector(".custom-fraction");
+        const current = customFraction.querySelector(".current");
+        const total = customFraction.querySelector(".total");
+        total.innerHTML = swiper.pagination.bullets.length;
+        current.innerHTML = swiper.realIndex + 1;
+      },
+      slideChange: function (swiper) {
+        const customFraction = document.querySelector(".custom-fraction");
+        const current = customFraction.querySelector(".current");
+        current.innerHTML = swiper.realIndex + 1;
+      },
+    },
   });
 }

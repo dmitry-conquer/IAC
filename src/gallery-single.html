@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Gallery single' })
+  <body>
+    <div class="overflow-hidden relative">
+      @@include('components/header-color.html', { })
+      <main>
+        <section class="bg-light pt-24 sm:pt-[10rem] md:pt-[12rem] 2xl:pt-[15rem]">
+          <div class="container mb-[1.56rem] sm:mb-[5.45rem]">
+            <div class="grid items-start grid-cols-1 lg:grid-cols-[10rem_1fr] 2xl:grid-cols-[17rem_1fr] gap-6 sm:gap-12">
+              <a href="#" class="flex items-center gap-1 group">
+                <svg class="w-[8px] h-[14px] text-primary group-hover:text-primary-dark">
+                  <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                </svg>
+                <span class="uppercase underline font-bold underline-offset-4 group-hover:text-primary-dark">Back</span>
+              </a>
+              <div class="flex flex-col gap-8 sm:gap-12 lg:gap-[3.75rem]">
+                <div class="flex flex-col gap-3 sm:gap-5">
+                  <p class="text-primary-dark/70">19/09/2015</p>
+                  <h1 class="text-4xl/[1.37] sm:text-6xl/[1.15]">CEO & President of International Airfinance Corporation speaks at the IFN Kuwait Forum on October 19</h1>
+                  <!-- <p class="text-lg/[1.33] sm:text-xl/[1.33]">The Saudi Gazette 2015</p> -->
+                </div>
+                <div>
+                  <p>
+                    Mr. Moulay Omar Alaoui, CEO & President of International Airfinance Corporation was invited to the Islamic Finance News Forum in Kuwait. Mr. Moulay Omar Alaoui
+                    spoke and presented at the conference the topic titled “Sector Investment Opportunities for Kuwaiti Investors”. Mr. Moulay Omar Alaoui discussed the key points
+                    relating to outlook for investments and Islamic Financing in aviation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- slider -->
+          <div id="auto-slider-parent" class="pl-[calc((100%-1352px)/2)]">
+            <div class="auto-slider w-full overflow-hidden pl-2 mb-6 sm:mb-10">
+              <div class="auto-slider-wrapper flex w-full items-end">
+                <div style="max-width: 680px" class="auto-slider-slide group max-md:!max-w-none shrink-0">
+                  <img src="./img/gallery-page-single/image_1.webp" alt="image_1" class="rounded-[1.25rem] object-cover max-md:h-80 max-md:w-full max-sm:h-60" />
+                </div>
+                <div style="max-width: 320px" class="auto-slider-slide group max-md:!max-w-none shrink-0">
+                  <img src="./img/gallery-page-single/image_2.webp" alt="image_1" class="rounded-[1.25rem] object-cover max-md:h-80 max-md:w-full max-sm:h-60" />
+                </div>
+                <div style="max-width: 480px" class="auto-slider-slide group max-md:!max-w-none shrink-0">
+                  <img src="./img/gallery-page-single/image_2.webp" alt="image_1" class="rounded-[1.25rem] object-cover max-md:h-80 max-md:w-full max-sm:h-60" />
+                </div>
+                <div style="max-width: 280px" class="auto-slider-slide group max-md:!max-w-none shrink-0">
+                  <img src="./img/gallery-page-single/image_2.webp" alt="image_1" class="rounded-[1.25rem] object-cover max-md:h-80 max-md:w-full max-sm:h-60" />
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div data-da="#auto-slider-parent,1023.98,first" class="max-w-[61.56rem] max-lg:px-4 w-full flex justify-between items-center max-lg:mb-[1.54rem] lg:items-start ml-auto ">
+                <div class="flex gap-3">
+                  <button
+                    class="auto-slider-prev w-8 h-8 rounded-full border border-primary-dark/30 group hover:bg-primary grid place-content-center"
+                    type="button"
+                    aria-label="Previous slide">
+                    <svg class="w-[8px] h-[14px] text-primary group-hover:text-white">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                    </svg>
+                  </button>
+                  <button
+                    class="auto-slider-next w-8 h-8 rounded-full border border-primary-dark/30 group hover:bg-primary grid place-content-center"
+                    type="button"
+                    aria-label="Next slide">
+                    <svg class="w-[8px] h-[14px] text-primary group-hover:text-white rotate-180">
+                      <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="custom-fraction text-3xl lg:text-6xl text-primary/30"><span class="current text-primary">-</span>/<span class="total">-</span></div>
+              </div>
+              <div class="lg:hidden pagination pagination-color auto-slider-pagination justify-center flex"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>

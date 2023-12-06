@@ -29,6 +29,11 @@
     @apply w-[14px] h-[14px] bg-white transition-colors duration-300;
   }
 }
+.pagination-color {
+  .swiper-pagination-bullet {
+    @apply bg-primary;
+  }
+}
 
 // header
 #burger-inner {
