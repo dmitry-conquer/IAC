@@ -58,6 +58,8 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
+    "aos": "^2.3.4",
+    "countup.js": "^2.8.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-prettier-airbnb": "^0.5.0",
     "gulp-postcss": "^9.0.1",

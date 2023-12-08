@@ -2,6 +2,7 @@
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 @import "../../node_modules/swiper/modules/pagination/pagination.scss";
 @import "../../node_modules/swiper/modules/effect-fade/effect-fade.scss";
+@import '../../node_modules/aos/src/sass/aos.scss';
 
 @import "mixins";
 @import "fonts";
@@ -68,4 +69,47 @@
   &.is-open {
     @apply visible opacity-100;
   }
+}
+
+// flip card
+.slider-awards-slide {
+  background-color: transparent;
+  width: 19.68rem;
+  height: 100%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  .slide-inner {
+    position: relative;
+    width: 19.68rem;
+    height: 19.68rem;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  &:hover {
+    .slide-inner {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.slide-front,
+.slide-back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 19.68rem;
+  height: 19.68rem;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.slide-front {
+}
+
+.slide-back {
+  background-color: #f5f5f5;
+  color: white;
+  transform: translate(-50%, -50%) rotateY(180deg);
 }
