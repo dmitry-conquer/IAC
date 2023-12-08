@@ -1,6 +1,10 @@
 const videos = document.querySelectorAll(".video-wrap");
 
 videos.forEach(video => {
+  video.querySelector("video").pause()
+
+
+
   video.addEventListener("mouseover", e => {
     const currentVideo = e.target.closest("video");
     if (!currentVideo) {
